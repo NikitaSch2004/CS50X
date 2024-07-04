@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h4>Personal Portofolio</h4>
+    </div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Nr.</th>
+                <th scope="col">Stocks</th>
+                <th scope="col">Number of Shares</th>
+                <th scope="col">Current Price</th>
+                <th scope="col">Total Shares Value</th>
+                <th scope="col">Grand Total Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in stocks %}
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{symbol[i]['symbol']}}</td>
+                <td>{{shares[i]}}</td>
+                <td>{{currentPrice[i] | usd}}</td>
+                <td>{{totVal[i] | usd}}</td>
+                {% if i == 0 %}
+                <td id = "TotVal">{{TotalBalance}}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

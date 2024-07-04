@@ -1,0 +1,37 @@
+#u-list{
+    list-style-type: none;
+    padding:0px;
+    margin:0px;
+}
+.links{
+    text-decoration: none;
+    color: #F4F4F9;
+}
+.list{
+    padding: 5px 10px 5px 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top:5px;
+    display:inline-grid;
+    background-color: #586F7C;
+    border-radius: 10%;
+}
+#img{
+    width: 30px;
+    height:30px;
+    margin-right: 20px;
+}
+#text{
+    width: 40%;
+    padding-left: 10px;
+    padding-right: 30px;
+    border-width: 1px;
+    border-right: solid;
+    margin:0px;
+}
+#video{
+    position:absolute;
+    top: 20%;
+    left:53%;
+    text-align:center;
+}

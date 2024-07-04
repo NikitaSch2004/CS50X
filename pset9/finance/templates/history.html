@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h4>History</h4>
+    </div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Transaction</th>
+                <th scope="col">Date</th>
+                <th scope="col">Hour</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in lenPurchases%}
+            <tr>
+                <td>{{purchases[i]['name']}}</td>
+                <td>{{purchases[i]['symbol']}}</td>
+                <td>{{purchases[i]['price']}}</td>
+                <td>{{purchases[i]['shares']}}</td>
+                <td>Purchase</td>
+                <td>{{purchases[i]['date']}}</td>
+                <td>{{purchases[i]['hour']}}</td>
+            </tr>
+            {% endfor %}
+            {% for i in lenSales%}
+            <tr>
+                <td>{{sales[i]['name']}}</td>
+                <td>{{sales[i]['symbol']}}</td>
+                <td>{{sales[i]['price']}}</td>
+                <td>{{sales[i]['shares']}}</td>
+                <td>Sale</td>
+                <td>{{sales[i]['date']}}</td>
+                <td>{{sales[i]['hour']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

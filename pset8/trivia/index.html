@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function trigger(nr,id,val){
+                const child = document.getElementById(nr).children;
+                if(val == "Java Script"){
+                    document.getElementById(id).style.backgroundColor = "green";
+                    child[1].innerHTML = "Correct!";
+                }
+                else{
+                    document.getElementById(id).style.backgroundColor = "red";
+                    child[1].innerHTML = "Incorrect!";
+                }
+            }
+            function get_input(nr,id){
+                const child = document.getElementById(nr).children;
+                const content = child[3].value.toLowerCase();
+                if(content.search('three') != -1 || content.search('3') != -1){
+                    document.getElementById(id).style.backgroundColor = "green";
+                    child[5].innerHTML = "Correct!";
+                }
+                else{
+                    document.getElementById(id).style.backgroundColor = "red";
+                    child[5].innerHTML = "Incorrect!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3 class="q1" >In What langage I coded this?</h3>
+                <ul>
+                    <li id="1">
+                        <button id = "b1" type="submit" onclick="trigger('1','b1','C++'); return false;">C++</button>
+                        <div></div>
+                    </li>
+                    <li id="2">
+                        <button id = "b2" type="submit" onclick="trigger('2','b2','Java Script'); return false;">Java Script</button>
+                        <div></div>
+                    </li>
+                    <li id="3">
+                        <button id = "b3" type="submit" onclick="trigger('3','b3','PHP'); return false;">PHP</button>
+                        <div></div>
+                    </li>
+                    <li id="4">
+                        <button id = "b4" type="submit" onclick="trigger('4','b4','Python'); return false;">Python</button>
+                        <div></div>
+                    </li>
+                </ul>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+            <div class="section" id="section2" >
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>How many hearts does an octopus have?</h3>
+                <input type ="text">
+                <span><button type="submit" id ="btn" onclick="get_input('section2','btn'); return false;">Confirm</button></span>
+                <div></div>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reset
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h5>Reset account password</h5>
+    </div>
+    <form action="/reset" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="oldPassword" placeholder="Old password" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="newPassword" placeholder="New password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="newPassConfirmation" placeholder="Confirm new password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit" formmethod="post">Reset</button>
+    </form>
+{% endblock %}
