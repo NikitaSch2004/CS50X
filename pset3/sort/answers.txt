@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: I know because the difference of time
+
+sort2 uses: Merge Sort
+
+How do you know?: I know because the difference of time
+
+sort3 uses: Selection Sort
+
+How do you know?: I know because the difference of time
